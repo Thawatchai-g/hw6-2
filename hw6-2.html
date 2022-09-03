@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function takecolor() {
+            
+            var Name = document.getElementById("name");
+            var n = Name.value;
+
+            var Age = document.getElementById("age");
+            var a = Age.value;
+
+            var Birthdate = document.getElementById("birthdate");
+            var b = Birthdate.value;
+
+            if (n != "") {
+                Name.style.color = "green";
+            }
+            if (a != "") {
+                Age.style.color = "green";
+            }
+            if (b != "") {
+                Birthdate.style.color = "green";
+            }
+            if (n != ""&&a != "") 
+            {
+                Birthdate.style.color = "green";
+            }
+            if (n != ""&&b != "") 
+            {
+                Age.style.color = "green";
+            }
+            if (a != ""&&b != "") 
+            {
+                Name.style.color = "green";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Name: <input type="text" id="name" onclick="takecolor()"><br>
+        Age: <input type="text" id="age" size="4" onclick="takecolor()"><br>
+        Birthdate: <input type="text" id="birthdate" size="12" onclick="takecolor()">
+    </form>
+</body>
+</html>
